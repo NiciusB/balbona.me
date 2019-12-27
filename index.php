@@ -5,6 +5,7 @@ define('GITHUB_REPO_URL', 'https://raw.githubusercontent.com/NiciusB/balbona.me/
 $ch = curl_init();
 
 $requestUrl = $_SERVER['REQUEST_URI'];
+$requestUrl = strtok($requestUrl, '?'); // Remove query
 if ($requestUrl === '/') $requestUrl = '/index.html';
 
 curl_setopt($ch, CURLOPT_URL, GITHUB_REPO_URL . $requestUrl);
@@ -17,6 +18,7 @@ if (!curl_errno($ch)) {
     http_response_code($info['http_code']);
     $contentType = $info['content_type'];
     if (endsWith($requestUrl, '.html')) $contentType = 'text/html';
+    if (endsWith($requestUrl, '.pdf')) $contentType = 'application/pdf';
     header('Content-Type: '. $contentType);
     echo $urlContent;
 } else {
