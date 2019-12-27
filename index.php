@@ -15,9 +15,20 @@ $urlContent = curl_exec($ch);
 if (!curl_errno($ch)) {
     $info = curl_getinfo($ch);
     http_response_code($info['http_code']);
-    header('Content-Type: '.$info['content_type']);
+    $contentType = $info['content_type'];
+    if (endsWith($requestUrl, '.html')) $contentType = 'text/html';
+    header('Content-Type: '. $contentType);
     echo $urlContent;
 } else {
     http_response_code(500);
 }
 curl_close($ch);
+
+
+function endsWith($haystack, $needle) {
+    $length = strlen($needle);
+    if ($length == 0) {
+        return true;
+    }
+    return (substr($haystack, -$length) === $needle);
+}
