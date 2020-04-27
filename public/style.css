@@ -81,15 +81,15 @@ section#footer {
 section>div {
     max-width: 768px;
     margin: 0 auto;
+}
+
+body.supports-js section>div {
+    opacity: 0;
     -webkit-transition: opacity .5s ease-in-out;
     -moz-transition: opacity .5s ease-in-out;
     -ms-transition: opacity .5s ease-in-out;
     -o-transition: opacity .5s ease-in-out;
     transition: opacity .5s ease-in-out;
-}
-
-body.supports-js section>div {
-    opacity: 0;
 }
 
 body.supports-js section.loaded>div {
