@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 window.addEventListener('load', function () {
     var sections = document.getElementsByTagName('section');
     for (var i = 0; i < sections.length; i++) {
-        var timeout = 300 * i;
+        var timeout = 300 * (i + 1);
         setTimeout(function (ti) {
             sections[ti].classList.add('loaded');
         }, timeout, i);
