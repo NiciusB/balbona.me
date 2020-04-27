@@ -1,0 +1,97 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: whitesmoke;
+    color: #333;
+    line-height: 1.5;
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+}
+
+a {
+    color: #C75040;
+}
+
+b {
+    color: #505050;
+}
+
+::selection {
+    background: #ccc;
+}
+
+li {
+    margin: 0.3em 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: #505050;
+    font-family: 'Nunito Sans', sans-serif;
+    padding: 0.3em 0;
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 0;
+    border: 1px solid #777;
+    background: transparent;
+    padding: 3px 15px;
+}
+
+section {
+    padding: 2em 7%;
+}
+
+section#hi {
+    background: initial;
+}
+
+section#experience {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+section#personal {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+section#education {
+    background: rgba(0, 0, 0, 0.12);
+}
+
+section#projects {
+    background: rgba(0, 0, 0, 0.16);
+}
+
+section#trivia {
+    background: rgba(0, 0, 0, 0.20);
+}
+
+section#footer {
+    background: initial;
+    font-size: 0.85em;
+}
+
+section>div {
+    max-width: 768px;
+    margin: 0 auto;
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -ms-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+}
+
+body.supports-js section>div {
+    opacity: 0;
+}
+
+body.supports-js section.loaded>div {
+    opacity: 1;
+}
