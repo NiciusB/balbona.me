@@ -10,8 +10,15 @@ body {
     font-size: 1.1rem;
 }
 
+@media (max-width: 424px) {
+    body {
+        font-size: 1rem;
+    }
+}
+
 a {
     color: #C75040;
+    white-space: nowrap;
 }
 
 b {
@@ -24,6 +31,10 @@ b {
 
 li {
     margin: 0.3em 0;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
 }
 
 h1,
@@ -46,7 +57,10 @@ button {
 }
 
 section {
-    padding: 2em 7%;
+    padding: 2em;
+    width: 100%;
+    overflow-x: auto;
+    box-shadow: inset 0px 20px 20px rgba(0, 0, 0, 0.02);
 }
 
 section#hi {
@@ -75,12 +89,33 @@ section#trivia {
 
 section#footer {
     background: initial;
-    font-size: 0.85em;
+    font-size: 0.8em;
 }
 
 section>div {
     max-width: 768px;
     margin: 0 auto;
+}
+
+.year-range {
+    font-size: 0.8em;
+    color: #757575;
+}
+
+.link-logo img {
+    margin-right: -0.5em;
+    width: 0.5em;
+    height: 0.5em;
+    vertical-align: baseline;
+}
+/* Fill the layout with spaces instead of the actual img, to make the "text-decoration: underline" property extend under the image too */
+.link-logo::after {
+    display: inline-block;
+    content: " ";
+    text-decoration: underline;
+    width: 0.5em;
+    overflow: hidden;
+    vertical-align: bottom;
 }
 
 body.supports-js section>div {

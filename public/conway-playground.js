@@ -10,8 +10,8 @@ waitForConwayEngine(function () {
     conwayPlayground.style.imageRendering = 'pixelated'
     conwayPlayground.style.border = '1px solid #777'
     conwayPlayground.style.marginTop = '10px'
-    conwayPlayground.style.width = '300px'
-    conwayPlayground.style.height = '100px'
+    conwayPlayground.style.width = '270px'
+    conwayPlayground.style.height = '90px'
     conwayPlayground.style.verticalAlign = 'bottom'
     const ctx = conwayPlayground.getContext('2d')
 
