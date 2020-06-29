@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    document.body.classList.add('supports-js')
-});
-window.addEventListener('load', function () {
+    document.body.classList.add('supports-js');
+
     var sections = document.getElementsByTagName('section');
     for (var i = 0; i < sections.length; i++) {
         var timeout = 300 * (i + 1);

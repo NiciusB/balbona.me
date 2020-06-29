@@ -103,9 +103,9 @@ section>div {
 }
 
 .link-logo img {
-    margin-right: -0.5em;
-    width: 0.5em;
-    height: 0.5em;
+    margin-right: -0.7em;
+    width: 0.7em;
+    height: 0.7em;
     vertical-align: baseline;
 }
 /* Fill the layout with spaces instead of the actual img, to make the "text-decoration: underline" property extend under the image too */
@@ -113,7 +113,7 @@ section>div {
     display: inline-block;
     content: " ";
     text-decoration: underline;
-    width: 0.5em;
+    width: 0.7em;
     overflow: hidden;
     vertical-align: bottom;
 }
