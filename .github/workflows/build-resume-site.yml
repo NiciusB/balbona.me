@@ -28,6 +28,8 @@ jobs:
       run: npm install
 
     # Build pdf
+    # We run it through xvfb-run due to a bug in headless mode, in debian's version of wkhtmltopdf
+    # https://github.com/wkhtmltopdf/wkhtmltopdf/issues/2037#issuecomment-62019521
     - name: Build pdf
       run: xvfb-run -- npm run build_resume_pdf
 
