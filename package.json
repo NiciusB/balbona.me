@@ -1,0 +1,31 @@
+{
+  "name": "balbona.me",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel -p 3000 watch src/index.html",
+    "build": "parcel build src/index.html",
+    "build_resume_pdf": "cd src_resume_pdf && wkhtmltopdf --page-size A4 --margin-top 6mm --margin-bottom 6mm --margin-left 0 --margin-right 0 ./index.html ../src/resume.pdf",
+    "act": "act",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NiciusB/balbona.me.git"
+  },
+  "keywords": [],
+  "author": "NiciusB",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NiciusB/balbona.me/issues"
+  },
+  "homepage": "https://github.com/NiciusB/balbona.me#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-static-files-copy": "^2.5.0"
+  },
+  "dependencies": {
+    "conway-engine": "0.0.2"
+  }
+}
