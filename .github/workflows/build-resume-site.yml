@@ -12,8 +12,13 @@ jobs:
 
     - name: Install wkhtmltopdf
       run: |
-          apt-get update -y
-          apt-get install xvfb libfontconfig1 wkhtmltopdf -y
+          if ! [ -x "$(command -v git)" ]; then
+            echo 'Installing sudo for running local actions with `act`.' >&2
+            apt-get update -y
+            apt-get install sudo -y
+          fi
+          sudo apt-get update -y
+          sudo apt-get install xvfb libfontconfig1 wkhtmltopdf -y
 
     - uses: actions/setup-node@v1
       with:
