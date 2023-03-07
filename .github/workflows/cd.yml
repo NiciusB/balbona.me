@@ -7,8 +7,7 @@ on:
 
 jobs:
   cd:
-    runs-on: ubuntu-20.04
-    container: alekzonder/puppeteer:1.1
+    runs-on: ubuntu-latest
 
     steps:
     # Setup
@@ -19,7 +18,7 @@ jobs:
         node-version: '16'
 
     - name: Install npm dependencies
-      run: npm install
+      run: npm ci
 
     # Build pdf
     - name: Build pdf
