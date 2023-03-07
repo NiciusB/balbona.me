@@ -1,6 +1,9 @@
-name: Build resume site
+name: Build and deploy
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:

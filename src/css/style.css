@@ -130,3 +130,15 @@ body.supports-js section.loaded>div {
     -o-transition: opacity .5s ease-in-out;
     transition: opacity .5s ease-in-out;
 }
+
+
+#isOnWaterPlayground {
+    margin: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1rem;
+}
+#isOnWaterResult {
+    white-space: pre-wrap;
+}
