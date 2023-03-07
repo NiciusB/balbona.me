@@ -6,35 +6,24 @@ on:
       - master
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  cd:
+    runs-on: ubuntu-20.04
+    container: lironavon/docker-puppeteer-container:14.16.0
 
     steps:
     # Setup
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
-    - name: Install wkhtmltopdf
-      run: |
-          if ! [ -x "$(command -v sudo)" ]; then
-            echo 'Installing sudo for running local actions with `act`.' >&2
-            apt-get update -y
-            apt-get install sudo -y
-          fi
-          sudo apt-get update -y
-          sudo apt-get install xvfb libfontconfig1 wkhtmltopdf -y
-
-    - uses: actions/setup-node@v1
+    - uses: actions/setup-node@v3
       with:
-        node-version: '12.6'
+        node-version: '16'
 
     - name: Install npm dependencies
       run: npm install
 
     # Build pdf
-    # We run it through xvfb-run due to a bug in headless mode, in debian's version of wkhtmltopdf
-    # https://github.com/wkhtmltopdf/wkhtmltopdf/issues/2037#issuecomment-62019521
     - name: Build pdf
-      run: xvfb-run -- npm run build_resume_pdf
+      run: npm run build_resume_pdf
 
     # Build site
     - name: Build the site

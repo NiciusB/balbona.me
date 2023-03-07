@@ -1,10 +1,13 @@
 /* Main */
 body {
-    margin: 0;
-    font-size: 20px;
+    font-size: 13px;
     color: #333;
     font-family: 'Noto Sans', Arial, sans-serif;
-    background-color: #555;
+}
+@media screen {
+    body {
+        background-color: #555;
+    }
 }
 
 h1,
@@ -22,10 +25,15 @@ b {
 
 .main {
     margin: 0 auto;
-    padding: 1px 10mm;
-    width: 330mm;
-    min-height: 467.5mm;
     background-color: #fff;
+}
+
+@media screen {
+    .main {
+        padding: 4mm 8mm;
+        max-width: 210mm;
+        min-height: 297mm;
+    }
 }
 
 .title {
@@ -70,8 +78,8 @@ a {
 }
 
 .desc .desc-text img {
-    width: 130px;
-    height: 130px;
+    width: 6em;
+    height: 6em;
     border-radius: 50%;
     margin-right: 2em;
     border: 1px solid #757575;
@@ -84,8 +92,12 @@ a {
 /* Experience */
 .experience h3 {
     margin: 0;
-    position: relative;
-    top: -0.2em;
+    padding-bottom: 0.2em;
+}
+
+.experience ul li {
+    page-break-inside: avoid;
+
 }
 
 .experience ul ul {
@@ -160,7 +172,16 @@ a {
     height: 6px;
 }
 
+/* Education */
+.education {
+    page-break-inside: avoid;
+}
+
 /* Skills */
+.skills {
+    page-break-inside: avoid;
+}
+
 .skills ul li {
     padding: 0.3em 0;
 }
@@ -172,6 +193,7 @@ a {
 
 .portfolio>ul li {
     padding: 0.3em 0;
+    page-break-inside: avoid;
 }
 
 .portfolio>ul ul {
