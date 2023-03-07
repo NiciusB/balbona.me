@@ -8,7 +8,7 @@ on:
 jobs:
   cd:
     runs-on: ubuntu-20.04
-    container: lironavon/docker-puppeteer-container:14.16.0
+    container: alekzonder/puppeteer:1.1
 
     steps:
     # Setup
