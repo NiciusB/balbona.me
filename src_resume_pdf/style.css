@@ -108,10 +108,16 @@ a {
     padding: 0.3em 0;
 }
 
-.experience .year-range {
+.year-range {
     color: #757575;
     margin: 0;
     margin-bottom: 0.5em;
+}
+
+.inline-logo img {
+    width: 0.8em;
+    height: 0.8em;
+    vertical-align: baseline;
 }
 
 /* https://codepen.io/anon/pen/gJpLrR */
